@@ -1,0 +1,125 @@
+*, 
+::before, 
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    color: white;
+}
+
+main {
+    background-color: rgb(0, 139, 139);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    text-transform: capitalize;
+}
+
+.barOne, 
+.barTwo, 
+.barThree {
+    height: 30px;
+    margin: 20px auto;
+    width: 175px;
+}
+
+.barOne {
+    background: rgb(0, 204, 255);
+}
+
+.barTwo {
+    background: rgb(226, 70, 19);
+}
+
+.barThree {
+    background: rgb(0, 139, 139);
+}
+
+/* assign grid areas once */
+
+main {
+    grid-area: main;
+}
+
+.one {
+    grid-area: one;
+    
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+
+/* define grid for mobile */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "main" 
+    "one"
+    "two" 
+    "three";
+}
+
+/* laptop media query */
+
+@media (min-width: 576px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+        "main main" 
+        "one two" 
+        "three ."
+        ;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .one, .two, .three {
+        background: darkorchid;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "main main main" 
+        "one two three" 
+        ;
+    }
+    h1 {
+        font-size: 50px;
+    }
+
+    .one, .two, .three {
+        background: black;
+    }
+}
+
+
+
