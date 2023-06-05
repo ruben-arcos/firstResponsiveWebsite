@@ -4,8 +4,12 @@
     box-sizing: border-box;
 }
 
+html {
+    background: white;
+}
+
 body {
-    background: black;
+    background: darkgrey;
     color: white;
 }
 
@@ -18,18 +22,30 @@ main {
 
 section {
     text-align: center;
+    padding: 10%;
 }
 
 h1 {
     font-size: 40px;
     text-transform: capitalize;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+}
+
+h2 {
+    text-transform: capitalize;
+    font-family: 'Crimson Text', serif;
+}
+
+p {
+    font-family: 'Maven Pro', sans-serif;
 }
 
 .barOne, 
 .barTwo, 
 .barThree {
-    height: 30px;
-    margin: 20px auto;
+    height: 20px;
+    margin: 0 auto;
     width: 175px;
 }
 
@@ -101,7 +117,6 @@ main {
     }
 }
 
-
 @media (min-width: 992px) {
     .container {
         display: grid;
@@ -117,7 +132,7 @@ main {
     }
 
     .one, .two, .three {
-        background: black;
+        background: darkgrey;
     }
 }
 
